@@ -68,6 +68,7 @@ a {
     line-height: 1;
     color: #ff0066;
     text-align: center;
+    margin: 0;
 }
 
 .hero-sitename {
@@ -152,7 +153,7 @@ a {
     pointer-events: none;
 }
 
-.food-title {
+.section-heading {
     font-size: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -162,10 +163,184 @@ a {
     margin-bottom: 50px;
 }
 
-.food-grid {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px 20px;
     max-width: 1220px;
     margin: 0 auto;
+}
+
+.post {
+    position: relative;
+    padding-top: 60px;
+}
+
+.entry-number {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    border: 20px solid #ff0064;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0064;
+    z-index: 1;
+}
+
+.entry-title, .entry-price {
+    position: relative;
+    z-index: 2;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-description {
+    max-width: 480px;
+}
+
+.location-description h3{
+    font-size: 12px;
+    margin: 0;
+}
+
+.location-description p{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.map-inner {
+    position: relative;
+    padding-bottom: 75%;
+}
+
+.map-inner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* here we override the default styles*/
+.map-inner iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.site-footer {
+    padding: 50px 30px 20px 30px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.site-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+}
+
+a.social-link {
+    display: block;
+    margin-left: 5px;
+}
+
+.social-link img {
+    display: block;
+}
+
+/* Responsive styling */
+@media (max-width: 1100px) {
+    .entry-number {
+        width: 100px;
+        height: 100px;
+        border-width: 15px;
+    }
+
+    .post {
+        padding-top: 45px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 160px;
+    }
+
+    .hero-text {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 680px) {
+    .site-header {
+        padding: 20px;
+    }
+
+    .logo, .language-select {
+        width: 50px;
+    }
+
+    .menu-item {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .menu-item span {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-text {
+        font-size: 64px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .entry-number {
+        width: 60px;
+        height: 60px;
+        border-width: 8px;
+    }
+
+    .post {
+        padding-top: 30px;
+    }
+
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .hero-description {
+        bottom: 20px;
+    }
+}
+
+
+
+.lowercase {
+    text-transform: lowercase;
 }
